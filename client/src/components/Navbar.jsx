@@ -24,7 +24,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         >
           <Truck size={24} />
-          FreightFlow
+          Freit
         </Link>
 
         {/* Desktop Menu */}
