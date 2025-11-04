@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
+import "../index.css"; // Make sure the CSS animation is imported
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,15 +21,17 @@ export default function Navbar() {
     <header className="fixed w-full top-0 z-50">
       {/* 🔔 Continuous Scrolling Top Bar (Left → Right) */}
       <div className="bg-maroon-800 dark:bg-maroon-900 text-gray-200 py-1 overflow-hidden relative border-b border-maroon-700 dark:border-maroon-950">
-        <div className="flex whitespace-nowrap animate-marquee-left">
+        <div className="flex whitespace-nowrap animate-marquee-left hover:[animation-play-state:paused]">
           <div className="flex items-center gap-10 px-6">
-          <span className="flex items-center gap-2">
-              <strong className="text-gray-800 dark:text-gray-200">Trusted by 500+ businesses worldwide</strong> experience
-              seamless logistics with <strong>Freit</strong> today! 🌍
+            <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
+              <strong className="text-gray-800 dark:text-gray-200">
+                Trusted by 500+ businesses worldwide
+              </strong>{" "}
+              experience seamless logistics with <strong>Freit</strong> today! 🌍
             </span>
 
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
-            <span>
+              <span>
                 Contact us at <strong>support@freit.com</strong> for instant
                 assistance.
               </span>
@@ -36,31 +39,33 @@ export default function Navbar() {
             </span>
 
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
-            <span>
-                Call <strong>+254 700 123 456</strong> available 24/7 for
+              <span>
+                Call <strong>+254 790 086 093</strong> available 24/7 for
                 tracking & help.
               </span>
               <Phone size={16} className="text-maroon-400" />
             </span>
 
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
-            <span>
-                <strong>Freit</strong>  Delivering efficiency & reliability by
-                air, sea, and land.
+              <span>
+                <strong>Freit</strong> Delivering efficiency & reliability by
+                air, sea and land.
               </span>
               <Truck size={16} className="text-maroon-400" />
             </span>
           </div>
 
           {/* Duplicate for continuous scroll */}
-          <div className="flex items-center gap-10 px-6">
+          <div className="text-gray-800 dark:text-gray-200 flex items-center gap-10 px-6">
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
-              <strong className="text-gray-800 dark:text-gray-200">Trusted by 500+ businesses worldwide</strong> experience
-              seamless logistics with <strong>Freit</strong> today! 🌍
+              <strong className="text-gray-800 dark:text-gray-200">
+                Trusted by 500+ businesses worldwide
+              </strong>{" "}
+              experience seamless logistics with <strong>Freit</strong> today! 🌍
             </span>
 
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
-            <span>
+              <span>
                 Contact us at <strong>support@freit.com</strong> for instant
                 assistance.
               </span>
@@ -68,25 +73,25 @@ export default function Navbar() {
             </span>
 
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
-            <span>
-                Call <strong>+254 700 123 456</strong>  available 24/7 for
+              <span>
+                Call <strong>+254 790 086 093</strong> available 24/7 for
                 tracking & help.
               </span>
               <Phone size={16} className="text-maroon-400" />
             </span>
 
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
-            <span>
-                <strong>Freit</strong>  Delivering efficiency & reliability by
-                air, sea, and land.
+              <span>
+                <strong>Freit</strong> Delivering efficiency & reliability by
+                air, sea and land.
               </span>
               <Truck size={16} className="text-maroon-400" />
             </span>
-
           </div>
         </div>
       </div>
 
+      {/* 🌍 Main Navbar */}
       <nav className="bg-maroon-700 dark:bg-maroon-800 text-white shadow-md transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <Link
