@@ -1,26 +1,24 @@
 import { Link } from "react-router-dom";
 import {
-  Package,
   Truck,
-  BarChart3,
   Phone,
   Home as HomeIcon,
   Menu,
   X,
   Mail,
-  Globe2,
+  Package,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
-import "../index.css"; // Make sure the CSS animation is imported
+import "../index.css";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed w-full top-0 z-50">
+    <header className="fixed w-full top-0 z-50 backdrop-blur-md bg-white/30 dark:bg-black/30">
       {/* 🔔 Continuous Scrolling Top Bar (Left → Right) */}
-      <div className="bg-maroon-800 dark:bg-maroon-900 text-gray-200 py-1 overflow-hidden relative border-b border-maroon-700 dark:border-maroon-950">
+      <div className="bg-maroon-800/90 dark:bg-black/90 text-gray-200 py-1 overflow-hidden relative">
         <div className="flex whitespace-nowrap animate-marquee-left hover:[animation-play-state:paused]">
           <div className="flex items-center gap-10 px-6">
             <span className="text-gray-800 dark:text-gray-200 flex items-center gap-2">
@@ -92,7 +90,7 @@ export default function Navbar() {
       </div>
 
       {/* 🌍 Main Navbar */}
-      <nav className="bg-maroon-700 dark:bg-maroon-800 text-white shadow-md transition-colors duration-300">
+      <nav className="bg-maroon-700 dark:bg-black text-white shadow-md transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <Link
             to="/"
@@ -104,8 +102,7 @@ export default function Navbar() {
 
           <div className="hidden md:flex gap-6">
             <NavLink to="/" icon={<HomeIcon size={18} />} text="Home" />
-            <NavLink to="/book" icon={<Package size={18} />} text="Book" />
-            <NavLink to="/track" icon={<BarChart3 size={18} />} text="Track" />
+            <NavLink to="/services" icon={<Package size={18} />}text="Services" />
             <NavLink to="/fleet" icon={<Truck size={18} />} text="Fleet" />
             <NavLink to="/contact" icon={<Phone size={18} />} text="Contact" />
           </div>

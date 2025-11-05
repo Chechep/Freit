@@ -32,7 +32,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-2 rounded-full bg-maroon-700 hover:bg-maroon-800 transition"
+      className="p-2 rounded-full hover:bg-maroon-800 transition"
       title={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       {darkMode ? (

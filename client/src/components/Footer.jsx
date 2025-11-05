@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-maroon-700 dark:bg-gray-900 text-white py-10 px-6">
+    <footer className="bg-maroon-700 dark:bg-black text-white py-10 px-6 transition-none">
       <div className="max-w-7xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-10">
 
         {/* Company Info */}
@@ -50,7 +50,7 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-gray-600 mt-10 pt-4 text-center text-gray-300 text-sm">
+      <div className="mt-10 pt-4 text-center text-gray-300 text-sm">
         © {new Date().getFullYear()} Freit Logistics. All rights reserved.
       </div>
     </footer>

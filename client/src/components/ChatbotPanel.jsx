@@ -31,8 +31,8 @@ export default function ChatbotPanel() {
       )}
 
       {open && (
-        <div className="fixed bottom-6 right-6 bg-white dark:bg-gray-800 border rounded-2xl shadow-lg w-80">
-          <div className="p-3 bg-maroon-700 text-white font-semibold rounded-t-2xl flex justify-between">
+        <div className="fixed bottom-6 right-6 bg-white dark:bg-black border rounded-2xl shadow-lg w-80">
+          <div className="p-3 bg-maroon-700 dark:bg-black text-white font-semibold rounded-t-2xl flex justify-between">
             <span>FreightBot</span>
             <button onClick={() => setOpen(false)}>✖</button>
           </div>
@@ -43,7 +43,7 @@ export default function ChatbotPanel() {
                   className={`inline-block px-3 py-1 rounded-lg ${
                     msg.sender === "user"
                       ? "bg-maroon-700 text-white"
-                      : "bg-gray-200 dark:bg-gray-700 dark:text-gray-200"
+                      : "bg-gray-200 dark:bg-gray-800 dark:text-gray-200"
                   }`}
                 >
                   {msg.text}
